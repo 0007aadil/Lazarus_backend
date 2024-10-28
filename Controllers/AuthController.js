@@ -19,7 +19,7 @@ module.exports.Signup = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      // sameSite: "Strict",
+       sameSite: "None",
     });
 
     return res.status(201).json({ message: "User signed up successfully", success: true, user: { email: user.email, username: user.username } });
@@ -51,7 +51,7 @@ module.exports.Login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      // sameSite: "Strict",
+       sameSite: "None",
     });
 
     return res.status(200).json({
