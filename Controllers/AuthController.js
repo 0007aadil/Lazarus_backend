@@ -51,7 +51,7 @@ module.exports.Login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Strict",
+      // sameSite: "Strict",
     });
 
     return res.status(200).json({
