@@ -24,7 +24,7 @@ if (!uri) {
 
 // CORS configuration
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:3001'], // The frontend URL
+    origin: ['lazarus-dashboard.vercel.app', 'http://localhost:3001'], // The frontend URL
     credentials: true,
 };
 
