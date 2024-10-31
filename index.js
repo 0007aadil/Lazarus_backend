@@ -109,6 +109,7 @@ app.get("/allPositions", async (req, res, next) => {
 
 
 app.post("/newOrder", async (req, res) => {
+    console.log("Received order data:", req.body); 
     try {
         const token = req.cookies.token;
         if (!token) {
